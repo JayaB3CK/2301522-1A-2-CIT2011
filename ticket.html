@@ -19,7 +19,7 @@
 
     <main class="ticket-main">
         <div class="confirmation-text">
-            <h1>Congrats, <span class="highlight-orange" id="display-name">Name</span>!<br>Your ticket is ready.</h1>
+            <h1>Congrats, <span class="highlight-orange" id="display-name"></span>!<br>Your ticket is ready.</h1>
             <p>We've emailed your ticket to <br class="mobile-break"><span class="highlight-orange" id="display-email"></span> and will send updates in the run up to the event.</p>
         </div>
 
@@ -54,3 +54,12 @@
 	<footer class="main-footer">
 		<p>&copy; 2026 Coding Conf. All rights reserved.</p>
 	</footer>
+  <script>
+    const fullName = localStorage.getItem('fullName');
+    if (fullName) {
+      document.getElementById('display-name').textContent = fullName;
+      document.getElementById('ticket-name').textContent = fullName;
+    }
+  </script>
+</body>
+</html>
