@@ -10,13 +10,13 @@
     --error-red: hsl(7, 88%, 67%);
     --main-font: 'Inconsolata', monospace;
 }
-
+ /*remove default margins*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+/*removes default margins from headings and paragraphs*/
 :where(h1, h2, h3, p) {
     margin: 0;
 }
@@ -35,7 +35,7 @@ body {
     display: flex;
     flex-direction: column;
 }
-
+/*For different screen sizes, change the background image to a mobile version*/
 @media (max-width: 768px) {
     body {
      background-image: url('../assets/images/background-mobile.png');
